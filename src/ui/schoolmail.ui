@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SchoolMail</class>
+ <widget class="QMainWindow" name="SchoolMail">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>582</width>
+    <height>506</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>校园邮件客户端</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../qrc.qrc">
+    <normaloff>:/new/prefix1/image/mailbox.png</normaloff>:/new/prefix1/image/mailbox.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QTabWidget" name="ui_tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="tabsClosable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>邮箱</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QTreeWidget" name="ui_mailBoxList">
+            <property name="contextMenuPolicy">
+             <enum>Qt::CustomContextMenu</enum>
+            </property>
+            <column>
+             <property name="text">
+              <string>邮箱列表</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+             </property>
+             <property name="foreground">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="ui_messageList">
+            <property name="contextMenuPolicy">
+             <enum>Qt::CustomContextMenu</enum>
+            </property>
+            <column>
+             <property name="text">
+              <string>收件人</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>主题</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>发件人</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>日期</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>582</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="closeAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>工具</string>
+    </property>
+    <addaction name="addMailBoxAction"/>
+    <addaction name="addToAddrBookAction"/>
+    <addaction name="addSignature"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>消息</string>
+    </property>
+    <addaction name="newMessageAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="softwareAction"/>
+    <addaction name="qt_aboutAction"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="newMessageAction"/>
+   <addaction name="separator"/>
+   <addaction name="addSignature"/>
+   <addaction name="separator"/>
+   <addaction name="addMailBoxAction"/>
+   <addaction name="separator"/>
+   <addaction name="addToAddrBookAction"/>
+   <addaction name="separator"/>
+  </widget>
+  <action name="newMessageAction">
+   <property name="icon">
+    <iconset resource="../qrc.qrc">
+     <normaloff>:/new/prefix1/image/writeMsg.png</normaloff>:/new/prefix1/image/writeMsg.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建消息</string>
+   </property>
+  </action>
+  <action name="addMailBoxAction">
+   <property name="icon">
+    <iconset resource="../qrc.qrc">
+     <normaloff>:/new/prefix1/image/mailbox.png</normaloff>:/new/prefix1/image/mailbox.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建邮箱</string>
+   </property>
+  </action>
+  <action name="addToAddrBookAction">
+   <property name="icon">
+    <iconset resource="../qrc.qrc">
+     <normaloff>:/new/prefix1/image/addrBook.png</normaloff>:/new/prefix1/image/addrBook.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建联系人</string>
+   </property>
+  </action>
+  <action name="addSignature">
+   <property name="icon">
+    <iconset resource="../qrc.qrc">
+     <normaloff>:/new/prefix1/image/newMsg.png</normaloff>:/new/prefix1/image/newMsg.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建签名</string>
+   </property>
+  </action>
+  <action name="softwareAction">
+   <property name="icon">
+    <iconset resource="../qrc.qrc">
+     <normaloff>:/new/prefix1/image/mailbox.png</normaloff>:/new/prefix1/image/mailbox.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于软件</string>
+   </property>
+  </action>
+  <action name="qt_aboutAction">
+   <property name="icon">
+    <iconset resource="../qrc.qrc">
+     <normaloff>:/new/prefix1/image/mailbox.png</normaloff>:/new/prefix1/image/mailbox.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于Qt</string>
+   </property>
+  </action>
+  <action name="closeAction">
+   <property name="text">
+    <string>关闭</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../qrc.qrc"/>
+ </resources>
+ <connections/>
+</ui>

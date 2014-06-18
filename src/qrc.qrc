@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>image/centerAlignment.png</file>
+        <file>image/delMsg.png</file>
+        <file>image/leftAlignment.png</file>
+        <file>image/newMsg.png</file>
+        <file>image/rightAlignment.png</file>
+        <file>image/bold.png</file>
+        <file>image/italic.png</file>
+        <file>image/writeMsg.png</file>
+        <file>image/mailbox.png</file>
+        <file>image/addPic.png</file>
+        <file>image/attach.png</file>
+        <file>image/addrBook.png</file>
+        <file>image/xinxi.png</file>
+        <file>image/addAttach.png</file>
+    </qresource>
+</RCC>
